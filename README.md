@@ -5,7 +5,7 @@ Creating modal windows, that pop up after some trigger or on time.
 With and without background.
 **html and css markup**
 
-html elements:
+### html elements:
 
 1. background element (example of css styles)
 ```
@@ -26,7 +26,7 @@ html elements:
 
 4. trigger button (not necessary)
 
-**Create js function with constructor ModalUnit**
+### Create js function with constructor ModalUnit
 
 4 required arguments and 3 additional
 ```

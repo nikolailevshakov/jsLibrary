@@ -41,31 +41,10 @@ let modalEx = new ModalUnit('.modal_trigger', '.modal_bg', '.modal_window', '.cl
 
 argument | description | default
 ---------|-------------|--------
-.modal_trigger | Trigger to call modal window, if not required leave ''| -
-.modal_bg | Background of modal, if not required leave '' | -
-
-3. *.modal_window*
-
-Modal window.
-
-4. *.close_modal*
-
-Element to click in order to close window
-
-5. closeOnBg 
-
-**(default true)**
-
-To close window on clicking outside modal.
-
-6. showOnTime 
-
-**(default false)**
-
-To make window appear in some time put amount of ms.
-
-7. bg 
-
-**(default true)**
-
-To have background appear along with modal window.
+.modal_trigger | trigger to call modal window, if not required leave ''| -
+.modal_bg | background of modal, if not required leave '' | -
+.modal_window | modal window | -
+.close_modal | element to click in order to close window | -
+closeOnBg | to close window on clicking outside modal | true
+showOnTime | To make window appear in some time put amount of ms | false
+bg | To have background appear along with modal window | true 

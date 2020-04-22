@@ -7,7 +7,9 @@ With and without background.
 
 ### html elements:
 
-1. background element (example of css styles)
+1. background element 
+
+(example of css styles)
 ```
     display: none;
     position: fixed;
@@ -19,25 +21,28 @@ With and without background.
     background-color: rgba(255, 255, 255, .5);
 ```
 
-2. modal window (necessary css styles)
+2. modal window 
+
+(necessary css styles)
 `z-index: more than *number*`
 
 3. close button
 
-4. trigger button (not necessary)
+4. trigger button 
 
-### Create js function with constructor ModalUnit
+(not necessary)
+
+### Create js function with constructor ModalUnit:
 
 4 required arguments and 3 additional
 ```
 let modalEx = new ModalUnit('.modal_trigger', '.modal_bg', '.modal_window', '.close_modal',true, false, false);
 ```
-1. *.modal_trigger*
-Trigger to call modal window, if not required leave ''.
 
-2. *.modal_bg*
-
-Background of modal, if not required leave ''.
+argument | description | default
+---------|-------------|--------
+.modal_trigger | Trigger to call modal window, if not required leave ''| -
+.modal_bg | Background of modal, if not required leave '' | -
 
 3. *.modal_window*
 

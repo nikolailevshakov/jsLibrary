@@ -1,5 +1,5 @@
 const sliders = () => {
-    function slidesGo (itemsSelector, prevSelector, nextSelector, slidesToSlide=1, slidesToShow=1, arrows=true, auto=true) {
+    function slidesGo (itemsSelector, prevSelector, nextSelector, slidesToSlide=1, slidesToShow=1, arrows=true, auto=3000) {
         const slideItems = document.querySelectorAll(itemsSelector);
         let slideIndex = 0,
             paused = false;
@@ -25,10 +25,10 @@ const sliders = () => {
         function plusSlides(n) {
             showSlides(slideIndex += n);
         };
-        function autoShow() {
+        function autoShow(time) {
             paused = setInterval(() => {
                 plusSlides(slidesToSlide);
-            }, 3000);
+            },time);
         };
         if (arrows) {
             const prev = document.querySelector(prevSelector),
@@ -42,20 +42,20 @@ const sliders = () => {
         } 
 
         if (auto) {
-            autoShow();
+            autoShow(auto);
         //остановка и старт работы слайдера при наведении мыши
         slideItems[0].parentNode.parentNode.addEventListener('mouseenter', () => {
             clearInterval(paused);
         });
         slideItems[0].parentNode.parentNode.addEventListener('mouseleave', () => {
-            autoShow();
+            autoShow(auto);
         });
         }
 
         showSlides(slidesToShow);
     };
 
-    slidesGo('.slider_item', '.prev_arr', '.next_arr', 1, 3, true, true);
+    slidesGo('.slider_item', '.prev_arr', '.next_arr', 1, 3, true, 1000);
 };
 
 sliders();

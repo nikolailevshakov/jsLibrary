@@ -3,9 +3,8 @@
 ## Modals
 Creating modal windows, that pop up after some trigger or on time.
 With and without background.
-**html and css markup**
 
-### html elements:
+### html elements with css:
 
 1. background element 
 
@@ -32,9 +31,9 @@ With and without background.
 
 (not necessary)
 
-### Create js function with constructor ModalUnit:
+### Create js object with constructor ModalUnit:
 
-4 required arguments and 3 additional
+4 required arguments and 3 additional(example):
 ```
 let modalEx = new ModalUnit('.modal_trigger', '.modal_bg', '.modal_window', '.close_modal',true, false, false);
 ```
@@ -48,3 +47,33 @@ argument | description | default
 closeOnBg | to close window on clicking outside modal | true
 showOnTime | To make window appear in some time put amount of ms | false
 bg | To have background appear along with modal window | true 
+
+## Sliders
+Creating sliders, with different amount slides to show and to slide.
+
+**html and css markup**
+
+### html elements with css:
+
+1. prev arrow
+
+2. slides
+
+3. next arrow
+
+### Use function slidesGo():
+
+3 required arguments and 4 additional(example):
+```
+slidesGo('.slider_item', '.prev_arr', '.next_arr', 1, 3, true, true);
+```
+
+argument | description | default
+---------|-------------|--------
+.slider_item | slider image | -
+.prev_arr | arrow for previous image | -
+.next_arr | arrow for next image | -
+slidesToSlide | amount of elements to slide | 1
+slidesToShow | amount of elements to show | 1
+arrows | using arrows or not | true
+auto | to automaticaly change element, input amount of ms or false | 3000

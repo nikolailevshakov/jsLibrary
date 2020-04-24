@@ -53,25 +53,26 @@ const modals = () => {
             });
             if (bg) {
                 // click out of modal and close it 
-            bgModal.addEventListener('click', (event) => {
-                // to prevent closing modal on clicking modal
-                if (event.target === bgModal && closeOnBg) {
-                    if (bg) {
-                        bgModal.style.display = 'none';
-                        document.body.style.overflow = 'initial';
+                bgModal.addEventListener('click', (event) => {
+                    // to prevent closing modal on clicking modal
+                    if (event.target === bgModal && closeOnBg) {
+                            bgModal.style.display = 'none';
+                            document.body.style.overflow = 'initial';
+                        modalWindow.forEach((item) => {
+                            item.style.display = 'none';
+                        });
+                        document.body.style.marginRight = `0px`;
                     }
-                    modalWindow.forEach((item) => {
-                        item.style.display = 'none';
-                    });
-                    document.body.style.marginRight = `0px`;
-                }
-            });
+                });
             }
 
 // function for showing modal on time
             function showModalByTime (time) {
                 setTimeout(function() {
                     modalWindow.forEach((item) => {
+                        bgModal.style.display = 'block';
+                        bgModal.style.visibility = 'hidden';
+                        item.style.visibility = 'visible';
                         item.style.display = 'block';
                     });
                     if (bg) {
@@ -114,7 +115,7 @@ const modals = () => {
         this.bg = bg;
     }
 // creating argument
-    let modalEx = new ModalUnit('.modal_trigger', '.modal_bg', '.modal_window', '.close_modal', true, false, false);
+    let modalEx = new ModalUnit('.modal_trigger', '.modal_bg', '.modal_window', '.close_modal', true, false, true);
 
 // call function
     goModal(modalEx);

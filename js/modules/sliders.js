@@ -55,7 +55,7 @@ const sliders = () => {
         showSlides(slidesToShow);
     };
 
-    slidesGo('.slider_item', '.prev_arr', '.next_arr', 1, 3, true, 1000);
+    slidesGo('.slider_item', '.prev_arr', '.next_arr', 1, 1, true, 60000);
 };
 
 sliders();

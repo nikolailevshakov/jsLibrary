@@ -86,10 +86,25 @@ h1 {
         justify-content: center;
         align-items: center;
         img {
-            width: 400px;
+            // width: 400px;
             height: 400px;
             margin: 5px;
         }
+    }
+}
+.timer_bg {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    .timer {
+        width: 100px;
+        height: 60px;
+        background-color: #000;
+        font-size: 3em;
+        text-align: center;
     }
 }
 

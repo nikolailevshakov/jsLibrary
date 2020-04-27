@@ -77,3 +77,25 @@ slidesToSlide | amount of elements to slide | 1
 slidesToShow | amount of elements to show | 1
 arrows | using arrows or not | true
 auto | to automaticaly change element, input amount of ms or false | 3000
+
+## Timers
+Creating timer
+
+**html and css markup**
+
+### html elements with css:
+
+1.Timer background
+
+2.ids for days, hours, minutes, seconds
+
+### Use function setClock():
+
+2 required arguments:
+```
+setClock('.timer_bg', '2020-07-04');
+```
+argument | description | default
+---------|-------------|--------
+.timer_bg | background for timer | -
+.deadline | date in format 'yyyy-mm-dd'| -
